@@ -1,80 +1,87 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="min-h-screen flex items-center justify-center px-6">
-            <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+        <section className="min-h-screen flex items-center justify-center p-8">
+            <div
+                className="
+          w-full
+          max-w-7xl
+          rounded-3xl
+          border
+          border-slate-700
+          bg-slate-900/60
+          p-10
+        "
+            >
+                <div className="grid md:grid-cols-2 gap-12 items-center">
 
-                <div className="flex justify-center">
-                    <Image
-                        src="/diogo.png"
-                        alt="Diogo Pavam"
-                        width={320}
-                        height={320}
-                        className="rounded-full border-4 border-blue-500 shadow-lg"
-                    />
+                    {/* FOTO */}
+                    <div className="flex justify-center">
+                        <Image
+                            src="/diogo.png"
+                            alt="Diogo Pavam"
+                            width={420}
+                            height={520}
+                            className="rounded-3xl object-cover"
+                        />
+                    </div>
+
+                    {/* TEXTO */}
+                    <div>
+
+                        <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-3 py-1 mb-6">
+                            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+
+                            <span className="text-sm text-slate-300">
+                                Open to Work
+                            </span>
+                        </div>
+
+                        <p className="text-blue-400 mb-4">
+                            Desenvolvedor Full-Stack
+                        </p>
+
+                        <h1 className="text-6xl font-bold leading-none mb-6">
+                            Diogo
+                            <br />
+                            Pavam
+                        </h1>
+
+                        <h2 className="text-2xl text-slate-300 mb-6">
+                            Desenvolvedor React, C# e SAP ABAP
+                        </h2>
+
+                        <p className="text-slate-400 mb-8">
+                            Participando de projetos práticos e construindo
+                            experiência em desenvolvimento web moderno com
+                            React, Next.js e C#.
+                        </p>
+
+                        <div className="flex gap-4">
+
+                            <a
+                                href="https://www.linkedin.com/in/diogo-pavam-083638197/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition">
+                                LinkedIn
+                            </a>
+
+                            <a
+                                href="https://github.com/DiogoPavam"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="px-6 py-3 rounded-xl border border-slate-600 hover:bg-slate-800 transition">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <p className="text-blue-400 font-medium mb-3">
-                    Olá, eu sou
-                </p>
-
-                <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                    Diogo Pavam
-                </h1>
-
-                <h2 className="mb-6 text-2x1 font-semibold text-gray-300 md:text-3x1">
-                    Desenvolvedor Full Stack em Formação
-                </h2>
-
-                <p className="text-gray-400 text-lg mb-8">
-                    Estudando React, Next.js, C#, ASP.NET e SAP ABAP.
-                    Atualmente participo de projetos práticos e busco oportunidades
-                    para crescer como desenvolvedor.
-                </p>
-
-                <div className="flex flex-wrap gap-3 mb-8">
-                    {[
-                        "React",
-                        "Next.js",
-                        "TypeScript",
-                        "C#",
-                        "ASP.NET",
-                        "SAP ABAP"
-                    ].map((tech) => (
-                        <span
-                            key={tech}
-                            className="bg-gray-800 px-4 py-2 rounded-full text-sm"
-                        >
-                            {tech}
-                        </span>
-                    ))}
-                </div>
-
-
-                <div className="flex gap-4">
-
-                    <a
-                        href="https://www.linkedin.com/in/diogo-pavam-083638197/"
-                        target="_blank" //abre o link em uma nova aba
-                        rel="noreferrer" //medida de segurança para links abertos com 'target'
-                        className="rounded-lg border border-gray-600 px-6 py-3 bg-blue-600 px-6 font-medium trasition hover-blue-700"
-                    >
-                        LinkedIn
-                    </a>
-
-                    <a
-                        href="https://github.com/DiogoPavam"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="rounded-lg border border-gray-600 px-6 py-3 font-medium transition hover:bg-gray-800"
-                    >
-                        GitHub
-                    </a>
-
-                </div>
-
             </div>
         </section>
-    )
+    );
 }
